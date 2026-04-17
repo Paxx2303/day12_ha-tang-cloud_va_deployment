@@ -19,9 +19,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Bước 5: Copy code vào container
 COPY 02-docker/develop/app.py .
 
-# Bước 6: Copy mock utils (from build context root)
+# Bước 6: Copy mock utils
 RUN mkdir -p utils
-COPY utils/mock_llm.py utils/
+COPY 02-docker/utils/mock_llm.py utils/
 
 # Bước 7: Expose port để documentation (không bắt buộc)
 EXPOSE 8000
